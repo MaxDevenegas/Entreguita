@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Tarjeta</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+        <div id="inputSection">
+            <input type="text" id="inputID" placeholder="ID de tarjeta">
+            <button id="btnConsultarPorID" class="consultaButton" onclick="consultarPorID()">Consultar por ID</button>
+        </div>
+        <div class="IDmostrado">ID: <span id="resultadoID"></span></div>
+        <div class="IDmostrado">Habilitado: <span id="habilitadospan"></span></div>
+        <div class="balance">Saldo: $<span id="balance"></span></div>
+        <div class="buttons">
+            <button id="cargarBtn" class="sideButton" onclick="cargarTarjeta()">Cargar</button>
+            <button id="descargarBtn" class="sideButton" onclick="descargarTarjeta()">Descargar</button>
+        </div>
+        <div class="buttons">
+            <button id="habilitarBtn" class="sideButton" onclick="habilitarTarjeta()">Habilitar</button>
+            <button id="deshabilitarBtn" class="sideButton" onclick="deshabilitarTarjeta()">Deshabilitar</button>
+        </div>
+        <div id="consultasVarias">
+            <h2>Consultas Varias</h2>
+            <button id="btnConsultarTarjetasHabilitadas" class="consultaButton" onclick="consultarTarjetasHabilitadasPorCaja()">Consultar tarjetas habilitadas por caja</button>
+            <button id="btnConsultarMontoPromedioSaldos" class="consultaButton" onclick="consultarMontoPromedioSaldos()">Consultar monto promedio de saldos habilitados por caja</button>
+            <button id="btnConsultarMontoPromedioCargas" class="consultaButton" onclick="consultarTarjetasDeshabilitadasporCaja()">Consultar tarjetas deshabilitadas por caja</button>
+            <button id="btnConsultarMontoTotalSaldos" class="consultaButton" onclick="consultarMontoTotalSaldos()">Consultar monto total de saldos anteriores</button>
+            <button id="btnConsultarMontoTotalCargasHabilitadas" class="consultaButton" onclick="consultarMontoTotalCargasHabilitadas()">Consultar monto total de saldos habilitados por caja</button>
+            <button id="btnConsultarMontoTotalCargasDeshabilitadas" class="consultaButton" onclick="consultarMontoTotalCargasDeshabilitadas()">Consultar monto total de saldos deshabilitadas por caja</button>
+        </div>
+        
+    </div>
+    <div class="card">
+        <div class="IDmostrado">Caja Seleccionada: <span id="caja-activa"></span></div>
+        <div class="buttons">
+            <button id="Caja1" class="sideButton2" onclick="Cajita(0)">Providencia-1</button> 
+            <button id="Caja2" class="sideButton2" onclick="Cajita(1)">Recoleta-2</button>
+        </div>
+        <div class="buttons">
+            <button id="Caja3" class="sideButton2" onclick="Cajita(2)">Maipu-3</button> 
+            <button id="Caja4" class="sideButton2" onclick="Cajita(3)">Ñuñoa-4</button>
+        </div>
+        <div class="buttons">
+            <button id="Caja5" class="sideButton2" onclick="Cajita(4)">Quilicura-5</button> 
+            <button id="Caja6" class="sideButton2" onclick="Cajita(5)">La florida-6</button>
+        </div>
+        <div class="buttons">
+            <button id="Caja7" class="sideButton2" onclick="Cajita(6)">Independencia-7</button> 
+            
+        </div>
+            
+        
+        <div id="resultado">
+            <textarea id="resultadoTextarea" class="tesbos" readonly></textarea> 
+        </div>
+  <div>
+    <script src="script.js"></script>
+</body>
+</html>
